@@ -1,0 +1,118 @@
+.id_box {
+  width: 500px;
+  height: 360px;
+  position: fixed;
+  top: 15vw;
+  left: 40vw;
+  display: grid;
+  grid-template-columns: 200px 30px 270px;
+  align-items: center;
+}
+.bg {
+  width: 500px;
+  height: 360px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 2;
+}
+.details_1 {
+  display: grid;
+  grid-template-rows: 30px 25px 25px 30px 25px 25px 25px;
+  margin-right: 100px;
+  margin-top: 10px;
+  z-index: 3;
+}
+.details_2 {
+  margin-top: 185px;
+  margin-right: 130px;
+  z-index: 3;
+}
+.data_field {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+
+  text-align: right;
+  font-weight: bold;
+}
+
+.id_pic {
+  height: 200px;
+  width: 160px;
+  margin-bottom: 105px;
+  margin-left: 22px;
+  position: absolute;
+  z-index: 1;
+  left: 0px;
+}
+body {
+  background: url(https://cdn.sherut.net/img/TheBack2.png) repeat 0 0 #e6ecf0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  
+}
+
+input[type="text"],
+select {
+  width: 100%;
+  padding: 14px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-color: #4040401b;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: #458eff;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #458fff97;
+}
+
+input[type="file"] {
+  visibility: hidden;
+}
+
+.uploadButton {
+  margin-top: 16px;
+  line-height: 50px;
+  text-align: center;
+  background:#4040401b;
+  color: #000000;
+  font-size: 16px;
+  border: none;
+  text-transform: Uppercase;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.uploadButton :hover {
+  background-color: #080b0e;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 600;
+  background-image: linear-gradient(to left, #404040, #404040);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}

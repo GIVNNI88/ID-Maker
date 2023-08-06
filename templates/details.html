@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+
+    <title>יצירת תעודת זהות</title>
+  </head>
+  <body>
+    <form action="/" method="POST" novalidate enctype="multipart/form-data">
+      {{form.csrf_token}}
+      <h1>יצירת תעודת זהות</h1>
+      <div>
+        <div>{{form.id.label}}</div>
+        <div>
+          {{form.id}} {% for massage in form.id.errors%}
+          <div style="color: red">{{massage}}</div>
+          {% endfor %}
+        </div>
+      </div>
+      <div>
+        <div>{{form.last_name.label}}</div>
+        <div>
+          {{form.last_name}} {% for massage in form.last_name.errors%}
+          <div style="color: red">{{massage}}</div>
+          {% endfor %}
+        </div>
+      </div>
+      <div>
+        <div>{{form.first_name.label}}</div>
+        <div>
+          {{form.first_name}} {% for massage in form.first_name.errors%}
+          <div style="color: red">{{massage}}</div>
+          {% endfor %}
+        </div>
+      </div>
+      <div>
+        <div>{{form.father_name.label}}</div>
+        <div>
+          {{form.father_name}} {% for massage in form.father_name.errors%}
+          <div style="color: red">{{massage}}</div>
+          {% endfor %}
+        </div>
+      </div>
+      <div>
+        <div>{{form.mother_name.label}}</div>
+        <div>
+          {{form.mother_name}} {% for massage in form.mother_name.errors%}
+          <div style="color: red">{{massage}}</div>
+          {% endfor %}
+        </div>
+      </div>
+      <div>
+        <div>
+          <label>תאריך לידה</label>
+        </div>
+        <div>{{form.date_year}}{{form.date_month}}{{form.date_day}}</div>
+      </div>
+      <div>
+        <div>{{form.gender.label}}</div>
+        <div>
+          {{form.gender}} {% for massage in form.gender.errors%}
+          <div style="color: red">{{massage}}</div>
+          {% endfor %}
+        </div>
+      </div>
+      <div>
+        <div>{{form.city_born.label}}</div>
+        <div>
+          {{form.city_born}} {% for massage in form.city_born.errors%}
+          <div style="color: red">{{massage}}</div>
+          {% endfor %}
+        </div>
+      </div>
+      <div>
+        <div>{{form.citizen.label}}</div>
+        <div>
+          {{form.citizen}} {% for massage in form.citizen.errors%}
+          <div style="color: red">{{massage}}</div>
+          {% endfor %}
+        </div>
+      </div>
+      <div>
+        <button
+          class="uploadButton"
+          onclick="document.getElementById('file').click(); return false;"
+        >
+          העלאת תמונה
+        </button>
+        <input type="file" id="file" name="myFile" />
+      </div>
+
+      <div>{{form.submit}}</div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+    <title>Document</title>
+  </head>
+  <body>
+    
+    <div class="id_box">
+      <div></div>
+      <div class="details_2">
+        <div class="data_field">{{form.data['citizen']}}</div>
+      </div>
+      <div class="details_1">
+        <div class="data_field">{{form.data['id']}}</div>
+        <div class="data_field">{{form.data['last_name']}}</div>
+        <div class="data_field">{{form.data['first_name']}}</div>
+        <div class="data_field">{{form.data['father_name']}}</div>
+        <div class="data_field">{{form.data['mother_name']}}</div>
+        <div class="data_field">
+          {{form.data['date_day']}}/{{form.data['date_month']}}/{{form.data['date_year']}}
+        </div>
+        <div class="data_field">{{form.data['city_born']}}</div>
+        <div class="data_field">{{form.data['gender']}}</div>
+      </div>
+      <img class="id_pic" src="/static/Image.jpeg" />
+      <img class="bg" src="/static/bg.png" />
+    </div>
+  </body>
+</html>
